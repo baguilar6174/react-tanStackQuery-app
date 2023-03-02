@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Outlet } from 'react-router';
 
-export const GitApp: FC = () => {
+export const GitApp: FC = (): JSX.Element => {
   
   return (
     <div className="container mt-5">
@@ -10,4 +10,3 @@ export const GitApp: FC = () => {
     </div>
   )
 }
-

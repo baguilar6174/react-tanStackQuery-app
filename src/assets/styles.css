@@ -35,3 +35,30 @@ h3 {
     background-color: rgba(255, 255, 255, 0.1);
     transition: all .5s;
 }
+
+.loader {
+  animation: spin-animation 1.5s infinite linear;
+  -webkit-animation: spin-animation 1.5s infinite linear;
+  display: block;
+}
+
+@keyframes spin-animation {
+  0% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(365deg);
+    -webkit-transform: rotate(365deg);
+    -moz-transform: rotate(365deg);
+    -ms-transform: rotate(365deg);
+    -o-transform: rotate(365deg);
+  }
+}
+
+.label-active {
+  background-color: rgba(255, 255, 255, .5);
+}
