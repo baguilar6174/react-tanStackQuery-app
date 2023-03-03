@@ -1,8 +1,12 @@
 import { useState } from 'react';
 import { IssueList } from '../components/IssueList';
 import { LabelPicker } from '../components/LabelPicker';
+import { Loading } from '../components/Loading';
+import { useIssues } from '../hooks/useIssues';
 
 export const ListView = (): JSX.Element => {
+
+  const { query } = useIssues();
 
   const [selectedLabels, setSelectedLabels] = useState<string[]>([]);
 
@@ -16,7 +20,9 @@ export const ListView = (): JSX.Element => {
     <div className="row mt-5">
       
       <div className="col-8">
-        <IssueList />
+        {
+          query.isLoading ? <Loading/> : <IssueList issues={query.data || []} />
+        }
       </div>
       
       <div className="col-4">

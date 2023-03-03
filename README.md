@@ -1,6 +1,6 @@
-# React Query Examples
+# React Query Github Issues App
 
-
+This project contains the implementation of TanStack Query (React Query) in simple examples where the great potential it has when handling asynchronous requests is shown.
 ## Installation
 
 Get code using
@@ -37,23 +37,29 @@ yarn dev
 
 ### What I learned
 
-- Configuración de React Query
+- React Query config
 - DevTools
-- Caché
+- Cache
   - Fresh
   - Stale
   - Inactive
   - Fetching
-- Propiedades como:
+- Properties like:
   - stale time
   - placeholderData
   - initialDate
+- Pre-fetch de queries
+- Establecer data en el caché
+- Establecer data en caché específico
+- Cargar data bajo demanda
+- QueryClient
 
 ## Github Issues App
 
 <table>
   <tr>
     <td align="center" valign="center"><img src="./media/1.png" width="100%"></td>
+    <td align="center" valign="center"><img src="./media/2.png" width="100%"></td>
   </tr>
 </table>
 
