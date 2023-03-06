@@ -6,7 +6,7 @@ import { Label } from "../interfaces";
 
 const getLabels = async (): Promise<Label[]> => {
   // await sleep(3);
-  const { data } = await api.get<Label[]>(`/labels`);
+  const { data } = await api.get<Label[]>(`/labels?per_page=100`);
   return data;
 }
 

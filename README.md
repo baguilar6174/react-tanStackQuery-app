@@ -49,10 +49,11 @@ yarn dev
   - placeholderData
   - initialDate
 - Pre-fetch de queries
-- Establecer data en el caché
-- Establecer data en caché específico
-- Cargar data bajo demanda
+- Set data in the cache
+- Set specific cache data
+- Load data on demand
 - QueryClient
+- Use objects as query identifiers
 
 ## Github Issues App
 
@@ -60,6 +61,9 @@ yarn dev
   <tr>
     <td align="center" valign="center"><img src="./media/1.png" width="100%"></td>
     <td align="center" valign="center"><img src="./media/2.png" width="100%"></td>
+  </tr>
+  <tr>
+    <td colSpan="2" align="center" valign="center"><img src="./media/3.png" width="100%"></td>
   </tr>
 </table>
 

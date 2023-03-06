@@ -3,12 +3,17 @@ import { IssueList } from '../components/IssueList';
 import { LabelPicker } from '../components/LabelPicker';
 import { Loading } from '../components/Loading';
 import { useIssues } from '../hooks/useIssues';
+import { State } from '../interfaces';
 
 export const ListView = (): JSX.Element => {
 
-  const { query } = useIssues();
-
   const [selectedLabels, setSelectedLabels] = useState<string[]>([]);
+  const [state, setState] = useState<State>();
+
+  const { query } = useIssues({
+    state,
+    labels: selectedLabels,
+  });
 
   const onLabelChange = (labelName: string) => {
     selectedLabels.includes(labelName)
@@ -21,7 +26,14 @@ export const ListView = (): JSX.Element => {
       
       <div className="col-8">
         {
-          query.isLoading ? <Loading/> : <IssueList issues={query.data || []} />
+          query.isLoading
+          ? <Loading/>
+          :
+            <IssueList
+              issues={query.data || []}
+              state={state}
+              onStateChanged={ (newState): void => setState(newState)}
+            />
         }
       </div>
       
