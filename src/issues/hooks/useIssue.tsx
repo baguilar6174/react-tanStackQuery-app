@@ -4,13 +4,13 @@ import { api } from "../../api/api";
 import { sleep } from '../../utils/sleep';
 import { Issue } from "../interfaces";
 
-const getIssue = async (number: number): Promise<Issue> => {
+export const getIssue = async (number: number): Promise<Issue> => {
   await sleep(2);
   const { data } = await api.get<Issue>(`/issues/${number}`);
   return data;
 }
 
-const getIssueComments = async (number: number): Promise<Issue[]> => {
+export const getIssueComments = async (number: number): Promise<Issue[]> => {
   await sleep(2);
   const { data } = await api.get<Issue[]>(`/issues/${number}/comments`);
   return data;
