@@ -54,6 +54,14 @@ yarn dev
 - Load data on demand
 - QueryClient
 - Use objects as query identifiers
+- Traditional pagination
+  - Next page
+  - Previous page
+  - Page number
+  - Cache per page and conditions
+- Infinite Scroll
+  - Load the following records
+  - Manage infinite scroll cache
 
 ## Github Issues App
 
